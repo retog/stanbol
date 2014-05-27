@@ -1,2 +1,5 @@
+before_install: 
+  - export MAVEN_OPTS=Dmaven.repo.local=$HOME/.m2/repository -Xmx512m -XX:MaxPermSize=192m
 language: java
-
+install: mvn --quiet install
+script: mvn --quiet verify
